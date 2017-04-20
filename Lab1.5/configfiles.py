@@ -1,12 +1,13 @@
 import glob
 
 spisok1 = []
-glob.glob("d:\\Seafile\\p4ne_training\\config_files\\*.txt")
+
 
 n= glob.glob("d:\\Seafile\\p4ne_training\\config_files\\*.txt")
 for i in n:
   f = open(i,'r')
   lines = f.readlines()
+  f.close()
   for j in lines:
         spisok = j.find('ip address')
 
