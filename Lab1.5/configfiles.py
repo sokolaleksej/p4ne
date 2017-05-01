@@ -3,7 +3,7 @@ import glob
 spisok1 = []
 
 
-n= glob.glob("d:\\Seafile\\p4ne_training\\config_files\\*.txt")
+n= glob.glob("d:\\Соколов\\Курс Python\\config_files\\*.txt")
 for i in n:
   f = open(i,'r')
   lines = f.readlines()
