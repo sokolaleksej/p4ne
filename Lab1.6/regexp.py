@@ -1,7 +1,7 @@
 import re
 import glob
 
-##s = 'my ip address is 192.168.1.1 mask 255.255.255.0'
+spisok1 = []
 
 def Classif (s):
 
@@ -25,9 +25,12 @@ for i in n:
   lines = f.readlines()
   f.close()
   for j in lines:
-        spisok = Classif(j)
+        spisok = ' '.join(Classif(j))
+        if spisok != "UNCLASSIFIED":
+            spisok1.append(spisok)
 
-        if spisok[0] != "UNCLASSIFIED":
-            print (spisok)
+
+for t in sorted(set(spisok1)):
+    print (t)
 
 
